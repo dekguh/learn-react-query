@@ -1,8 +1,13 @@
+import { Box } from '@mui/material'
 import React from 'react'
 
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <Box sx={{
+        color: 'redPrimary.main'
+    }}>
+        tes
+    </Box>
   )
 }
 
