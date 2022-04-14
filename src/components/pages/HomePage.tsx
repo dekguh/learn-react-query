@@ -1,14 +1,15 @@
 import { Box } from '@mui/material'
 import React from 'react'
-import ButtonCustom from '../controls/ButtonCustom'
-import ChipCustom from '../controls/ChipCustom'
-import InputCustom from '../controls/InputCustom'
+import HomeHeading from '../container/HomeHeading'
 
 const HomePage = () => {
   return (
-    <Box>
-        <InputCustom placeholder='placeholder'/>
-        <ButtonCustom text='submit todo'/>
+    <Box
+      sx={{
+        color: 'textBody.main'
+      }}
+    >
+        <HomeHeading />
     </Box>
   )
 }

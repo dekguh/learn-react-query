@@ -19,9 +19,9 @@ const StyledButton = styled(Button)(({ theme } : any) => ({
     }
 }))
 
-const ButtonCustom : React.FC<IButtonCustom> = ({ text, sx }) => {
+const ButtonCustom : React.FC<IButtonCustom> = ({ text, sx, dataTestId }) => {
   return (
-    <StyledButton sx={sx}>
+    <StyledButton sx={sx} data-testid={dataTestId}>
         {text}
     </StyledButton>
   )
