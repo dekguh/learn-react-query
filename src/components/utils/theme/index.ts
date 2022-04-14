@@ -1,5 +1,20 @@
-import { createTheme } from '@mui/system';
+import { createTheme } from '@mui/material/styles';
 import React from 'react';
+
+declare module '@mui/material/styles' {
+    interface Palette {
+        redPrimary: Palette['primary'];
+    }
+
+    interface PaletteOptions {
+        redPrimary: PaletteOptions['primary'];
+        bluePrimary: PaletteOptions['primary'];
+        blueSecondary: PaletteOptions['primary'];
+        textHeading: PaletteOptions['primary'];
+        textBody: PaletteOptions['primary'];
+
+    }
+}
 
 export default createTheme({
     breakpoints: {
