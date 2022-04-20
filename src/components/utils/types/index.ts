@@ -3,5 +3,10 @@ export interface IButtonCustom {
     sx?: {
         [key: string]: string | number;
     };
-    dataTestId: string;
+    dataTestId?: string;
+}
+
+export interface ICardTodo {
+    date?: string;
+    title?: string;
 }

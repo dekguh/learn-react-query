@@ -28,6 +28,16 @@ describe('Home Page Testing', () => {
             <HomePage />
         </ThemeProvider>)
 
-        expect(screen.getByTestId('test-title-recent')).toMatch(/^Recent task \([0-9]\)$/gs)
+        expect(screen.getByTestId('test-title-recent').textContent).toMatch(/^Recent task \([0-9]\)$/gs)
+    })
+
+    it('should home page have 3 card to-do', () => {
+        render(<ThemeProvider theme={theme}>
+            <HomePage />
+        </ThemeProvider>)
+
+        expect(screen.getByTestId('test-card-todo-1')).toBeInTheDocument()
+        expect(screen.getByTestId('test-card-todo-2')).toBeInTheDocument()
+        expect(screen.getByTestId('test-card-todo-3')).toBeInTheDocument()
     })
 })
