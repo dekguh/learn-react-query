@@ -159,7 +159,7 @@ const HomeRecently = () => {
                 }}
                 data-testid='test-title-recent'
             >
-                Recent task (1)
+                Recent task ({data  ? data.length : '0'})
             </Typography>
 
             <Box
@@ -186,7 +186,7 @@ const HomeRecently = () => {
                             pb: '30px'
                         }}
                     >
-                        <CardTodo date={data.date} title={data.title}/>
+                        <CardTodo date={data.date} title={data.title} dataTestId={`test-card-todo-${i+1}`}/>
                     </Box>
                 ))}
             </Box>
@@ -194,4 +194,4 @@ const HomeRecently = () => {
     )
 }
 
-export default HomeRecently
+export default React.memo(HomeRecently)

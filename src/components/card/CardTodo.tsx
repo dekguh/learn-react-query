@@ -5,7 +5,7 @@ import { AiOutlineClockCircle } from 'react-icons/ai'
 import ButtonCustom from '../controls/ButtonCustom'
 import { ICardTodo } from '../utils/types'
 
-const CardTodo : React.FC<ICardTodo> = ({ date, title }) => {
+const CardTodo : React.FC<ICardTodo> = ({ date, title, dataTestId }) => {
   return (
     <Box
         sx={{
@@ -14,6 +14,7 @@ const CardTodo : React.FC<ICardTodo> = ({ date, title }) => {
             borderRadius: '4px',
             padding: '15px'
         }}
+        data-testid={dataTestId}
     >
         {/* date wrap */}
         <Box
